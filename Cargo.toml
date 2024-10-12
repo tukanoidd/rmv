@@ -1,0 +1,47 @@
+[package]
+name = "rmv"
+version = "0.1.0"
+edition = "2021"
+authors = ["Vitalii Lukyanov <tukanoid@outlook.com>"]
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+
+iced = { version = "0.13.1", features = [
+  "fira-sans",
+  "system",
+  "lazy",
+  "tokio",
+  "highlighter",
+  "advanced",
+  "image",
+  "svg",
+  "markdown",
+] }
+iced_aw = "0.11.0"
+tokio = { version = "1.40.0", features = [
+  "rt-multi-thread",
+  "io-util",
+  "net",
+  "fs",
+] }
+tokio-stream = { version = "0.1.16", features = ["fs", "io-util"] }
+rfd = { version = "0.15.0", default-features = false, features = [
+  "tokio",
+  "xdg-portal",
+] }
+
+image = "0.25.2"
+imageproc = "0.25.0"
+infer = "0.16.0"
+uuid = { version = "1.10.0", features = ["serde", "v4"] }
+
+bon = "2.3.0"
+derive_more = { version = "1.0.0", features = ["deref", "from"] }
+
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+miette = { version = "7.2.0", features = ["fancy", "syntect-highlighter"] }
+thiserror = "1.0.64"
+iced_fonts = { version = "0.1.1", features = ["nerd"] }
